@@ -1,0 +1,21 @@
+<main>
+  <form method="post" action="<%= "/users/#{@user.id}" %>" id="edit-profile-form">
+    <input type="hidden" name="_method" value="put">
+        <label for="input">First Name:</label>
+        <input name="user[first_name]" type="text" value="<%= @user.try(:first_name) %>">
+        <br><br>
+
+        <label for="input">Last Name:</label>
+        <input name="user[last_name]" type="text" value="<%= @user.try(:last_name) %>">
+        <br><br>
+
+        <label for="input">Email</label>
+        <input name="user[email]" type="text" value="<%= @user.try(:email) %>">
+        <br><br>
+    <input type="submit" value="Update Profile" class="button">
+  </form>
+  <form method="post" action="<%= "/users/#{@user.id}" %>" id="edit-profile-form">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Account" class="button">
+  </form>
+</main>

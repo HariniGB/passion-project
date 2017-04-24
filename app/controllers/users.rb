@@ -1,7 +1,3 @@
-get '/users/index' do
-  erb :'users/index'
-end
-
 get '/users/new' do
   erb :'users/new'
 end
@@ -26,7 +22,7 @@ get '/users/:id/edit' do
   if logged_in?
     erb :'users/edit'
   else
-    redirect '/users/index'
+    redirect '/'
   end
 end
 
