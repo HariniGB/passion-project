@@ -25,9 +25,7 @@
           <ul>
             <li><a href="/">Home</a> </li>
             <% if !session[:id] %>
-              <section>
-                <% erb :'users/index'%>
-              </section>
+                <li> <a href='/users/index'> Login</a></li>
             <% elsif session[:id] %>
               <li> <a href='/users/<%= "#{session[:id]}"%>'>My profile </a></li>
               <form method="post" action="/logout">
