@@ -8,7 +8,11 @@ end
 
 post '/users' do
   @user = User.new(params[:user])
-  if @user.save
+  @user.password = params[:password]
+  if @user.matching(params[:password],params[:confirm_password])
+    @errors = ["Password is not matching."]
+    erb :'users/new'
+  elsif @user.save
     redirect '/users/index'
   else
     @errors = @user.errors.full_messages

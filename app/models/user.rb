@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def matching(initial_password, confirm_password)
+     initial_password != confirm_password
+  end
+
 end
