@@ -6,11 +6,15 @@ class User < ActiveRecord::Base
 
   has_many :games
 
-  # def average_score
-  #   total_games = self.games.count
-  #   total_scores = self.games.sum(score)
-  #   total_scores / total_games
-  # end
+  def average_score
+    total_games = self.games.count
+    total_scores = self.games.sum(:score)
+    if total_games > 0
+      total_scores / total_games
+    else
+      total_scores
+    end
+  end
 
   def password
     @password ||= BCrypt::Password.new(password_hash)
