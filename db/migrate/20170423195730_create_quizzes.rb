@@ -1,6 +1,6 @@
 class CreateQuizzes < ActiveRecord::Migration
   def change
-    create_table :questions do |t|
+    create_table :quizzes do |t|
       t.string :question, null: false
       t.string :answer, null: false
       t.integer :weight, null: false

@@ -28,10 +28,7 @@
                 <li> <a href='/users/index'> Login</a></li>
             <% elsif session[:id] %>
               <li> <a href='/users/<%= "#{session[:id]}"%>'>My profile </a></li>
-              <form method="post" action="/logout">
-                <input type="hidden" name="_method" value="delete">
-                <input type="submit" value="Logout" class="button">
-              </form>
+              <%= erb :'_logout' %>
             <% end %>
           </ul>
         </nav>

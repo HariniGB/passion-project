@@ -23,4 +23,10 @@
       <% end %>
     </div>
   </fieldset>
+  <div>
+   <button><a href='/users/<%="#{@user.id}"%>/games/new'>PLAY</a></button>
+  </div>
+  <div>
+      <% erb :'_errors' %>
+  </div>
 </main>

@@ -46,3 +46,22 @@ delete '/users/:id' do
   redirect '/'
 end
 
+get '/users/:user_id/games/new' do
+  erb :'games/new'
+end
+
+post '/user/:user_id/games/:game_id/guess' do
+  @user = User.find(params[:user_id])
+  @game = @user.game.new(params[:game])
+  if @game.save
+    redirect "/users/#{@user.id}"
+  else
+    @errors = @game.errors.full_messages
+    erb :'games/new'
+  end
+end
+
+get '/users/:user_id/games/show' do
+  erb :'games/show'
+end
+
