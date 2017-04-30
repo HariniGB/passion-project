@@ -1,3 +1,11 @@
+User.destroy_all
+Game.destroy_all
+Guess.destroy_all
+Option.destroy_all
+Quiz.destroy_all
+Topic.destroy_all
+
+
 user1 = User.new(first_name: "Harini", last_name: "Bala", email: "test@gmail.com")
 user1.password = "test"
 # Creates a new game when the user selects the play button.
@@ -7,15 +15,8 @@ user2 = User.new(first_name: "Fei", last_name: "Li", email: "lfangfeili@gmail.co
 user2.password = "xxx"
 user2.save
 #===============================================================================================================
-game = Game.create(user_id: 1)
-# Each guesses row is added when a user selects an answer. Points are from 1-5 for right answer.
-Guess.create(point: 3, guess_body: "Stephen Fry", game_id: 1, quiz_id: 1)
-Guess.create(point: 5, guess_body: "Boxer" , game_id: 1, quiz_id: 2)
-Guess.create(point: 2, guess_body: "Margaret Mountford", game_id: 1, quiz_id: 3)
-Guess.create(point: 3, guess_body: "A subway train", game_id: 1, quiz_id: 4)
-# .score method is to calculate the sum of points in guesses table and save it as score in game table.
-game.score
-
+game = Game.create(user_id: user1.id, score: 0)
+Game.create(user_id: user2.id, score: 40)
 #===============================================================================================================
 # There are in total 10 topics.
 topics = ["Entertainment", "Geography", "Mathematics", "Sports", "Technology", "Ruby", "HTML", "jQuery", "CSS", "JavaScript"]
@@ -261,3 +262,12 @@ questions10.each_index do |i|
   end
 end
 #===============================================================================================================
+
+# Each guesses row is added when a user selects an answer. Points are from 1-5 for right answer.
+Guess.create(point: 3, guess_body: "Stephen Fry", game_id: game.id, quiz_id: 1)
+Guess.create(point: 5, guess_body: "Boxer" , game_id: game.id, quiz_id: 2)
+Guess.create(point: 2, guess_body: "Margaret Mountford", game_id: game.id, quiz_id: 3)
+Guess.create(point: 3, guess_body: "A subway train", game_id: game.id, quiz_id: 4)
+# .score method is to calculate the sum of points in guesses table and save it as score in game table.
+game.score
+game.save

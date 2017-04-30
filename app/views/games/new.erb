@@ -6,9 +6,9 @@
 
   <form action= '/sessions/game' method= 'post'>
     <input type="hidden" name="topic_id" value="<%= @topic.id%>" >
-    <button type="submit" value="START THE GAME"></button>
+    <button type="submit" >START THE GAME</button>
   </form>
   <div>
-    <% erb :'_errors' %>
+    <%= erb :'_errors' %>
   </div>
 </main>

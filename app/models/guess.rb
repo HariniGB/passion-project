@@ -20,9 +20,4 @@ class Guess < ActiveRecord::Base
       self.point = nil
     end
   end
-
-  def topic.valid_quiz(next_quiz)
-
-
-  end
 end

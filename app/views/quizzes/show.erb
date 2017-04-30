@@ -1,15 +1,15 @@
 <main>
-  <div>
+  <div id = "wrapper">
     <form id = "answer_quiz" action ='/topic/<%="#{@topic.id}"%>/quiz/<%="#{@quiz.id}"%>/guess' method ='post'>
-      <label for='question'><%= @quiz.question %></label><br><br>
-      <% @quiz.options.each do |opt| %>
-        <label><p><%= opt.option %></p></label><input type= "radio" name = 'guess_body' value = '<%= opt.option %>'>
-        <br><br>
-      <% end %>
+        <label for='question'><%= @quiz.question %></label><br><br>
+        <% @quiz.options.each do |opt| %>
+          <label><%= opt.option %></label><input type= "radio" name = 'guess_body' value = '<%= opt.option %>'>
+          <br><br>
+        <% end %>
       <input type="submit" value="Submit">
     </form>
   </div>
-  <div>
-      <% erb :'_errors' %>
+  <div id= "show-error">
+      <%= erb :'_errors' %>
   </div>
 </main>

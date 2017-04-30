@@ -3,7 +3,7 @@ class Game < ActiveRecord::Base
 
   belongs_to :user
   has_many :guesses
-  has_many :topics, through: :guesses
+  has_many :quizzes, through: :guesses
 
   def total_questions
     self.guesses.count
