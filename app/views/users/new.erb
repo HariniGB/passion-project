@@ -24,12 +24,6 @@
         <input type="submit" value="Sign Up" class="button">
     </form>
     <div>
-        <% if @errors%>
-          <% @errors.each do |error| %>
-            <ul>
-              <li><%= error %></li>
-            </ul>
-          <% end %>
-        <% end %>
+        <%= erb :'_errors' %>
     </div>
 </main>

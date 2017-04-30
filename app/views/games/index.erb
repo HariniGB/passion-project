@@ -1,0 +1,14 @@
+<fieldset>
+    <legend> <em><b>Game Record</b></em></legend>
+    <div>
+      <label>Number of questions: <%= %></label><br>
+      <label>Average Score: <%= @user.average_score%></label>
+      <h3> List of topics with score </h3>
+      <% count = 0 %>
+      <% list = @user.games %>
+      <% list.each do |game| %>
+        <label>Game <%= count%>: <%= game.topic %>  <%= game.score %></label>
+        <% count += 1%>
+      <% end %>
+    </div>
+</fieldset>

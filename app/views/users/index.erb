@@ -1,6 +1,6 @@
 <div>
   <h1>Login</h1>
-    <form method="post" action="/login">
+    <form method="post" action="/sessions">
       <label for="input">Email</label>
       <input name="email" type="text"> <br><br>
 
@@ -10,13 +10,7 @@
       <input type="submit" value="Login" class="button">
      <p> If new user <a href='/users/new'>Sign Up </a></p>
     </form>
-    <div>
-      <% if @errors%>
-        <% @errors.each do |error| %>
-          <ul>
-            <li><%= error %></li>
-          </ul>
-        <% end %>
-      <% end %>
-    </div>
+</div>
+<div>
+  <%= erb :'_errors' %>
 </div>
