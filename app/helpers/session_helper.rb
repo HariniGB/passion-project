@@ -16,15 +16,15 @@
   end
 
   def game_in(game)
-    session[:id] = game.id
+    session[:game_id] = game.id
   end
 
   def game_out
-    session[:id] = user.id
+    session[:game_id] = nil
   end
 
   def current_game
-    @current_game ||= Game.find(session[:id]) if session[:id]
+    @current_game ||= Game.find(session[:game_id]) if session[:game_id]
   end
 
   def gaming_in?

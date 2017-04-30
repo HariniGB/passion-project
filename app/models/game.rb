@@ -9,7 +9,7 @@ class Game < ActiveRecord::Base
     self.guesses.count
   end
 
-  def score
+  def total_score
     self.score = self.guesses.sum(:point)
   end
 
@@ -17,11 +17,21 @@ class Game < ActiveRecord::Base
     wrong_questions = []
     list = self.guesses
     list.each do |guess|
-      if point == nil
-        wrong_questions << list.question
+      if guess.point == 0
+        wrong_questions << guess.quiz.question
       end
     end
     wrong_questions
+  end
+
+  def total_correct_questions
+    correct_answer = 0
+    self.guesses.each do |guess|
+      if guess.point != 0
+        correct_answer += 1
+      end
+    end
+    correct_answer
   end
 
   def highest_score

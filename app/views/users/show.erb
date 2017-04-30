@@ -14,16 +14,18 @@
     <div>
       <label>Total games: <%= @user.games.count%></label><br>
       <label>Average Score: <%= @user.average_score%></label>
-      <h3> List of topics with score </h3>
-      <% count = 1 %>
-     <!-- User.first.games.first.guesses.first.topic.topic_name -->
-      <% list = @user.games %>
+      <% if @user.games %>
+        <h3> List of topics with score </h3>
+        <% count = 1 %>
+        <!-- User.first.games.first.guesses.first.topic.topic_name -->
+        <% list = @user.games %>
         <% list.each do |game| %>
-          <% if game.guesses %>
-            <label>Game <%= count%>: <%= game.guesses.first.topic.topic_name %>  <%= game.score %></label>
-            <% count += 1%>
-          <% end %>
+            <% if game.guesses %>
+              <p>Game <%= count%>: <%= game.guesses.first.topic.topic_name %>  <%= game.score %></p>
+              <% count += 1%>
+            <% end %>
         <% end %>
+      <% end %>
     </div>
   </fieldset>
   <div>

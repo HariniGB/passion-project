@@ -17,7 +17,7 @@ class Guess < ActiveRecord::Base
     if self.correct_guess(quiz)
       self.point = quiz.weight
     else
-      self.point = nil
+      self.point = 0
     end
   end
 end
