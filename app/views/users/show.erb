@@ -20,7 +20,7 @@
         <!-- User.first.games.first.guesses.first.topic.topic_name -->
         <% list = @user.games %>
         <% list.each do |game| %>
-            <% if game.guesses %>
+            <% if !game.guesses.empty? %>
               <p>Game <%= count%>: <%= game.guesses.first.topic.topic_name %>  <%= game.score %></p>
               <% count += 1%>
             <% end %>

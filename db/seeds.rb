@@ -16,7 +16,6 @@ user2.password = "xxx"
 user2.save
 #===============================================================================================================
 game = Game.create(user_id: user1.id, score: 0)
-Game.create(user_id: user2.id, score: 40)
 #===============================================================================================================
 # There are in total 10 topics.
 topics = ["Entertainment", "Geography", "Mathematics", "Sports", "Technology", "Ruby", "HTML", "jQuery", "CSS", "JavaScript"]
