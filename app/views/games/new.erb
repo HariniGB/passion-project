@@ -3,7 +3,7 @@
   <p> The topic is <%= @topic.topic_name%></p>
 
   <!-- # should enhance this page with the colored wheel and generate a topic in random. -->
-
+  <%= erb :'wheel_canvas' %>
   <form action= '/sessions/game' method= 'post'>
     <input type="hidden" name="topic_id" value="<%= @topic.id%>" >
     <button type="submit" >START THE GAME</button>

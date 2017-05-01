@@ -1,79 +1,3 @@
-$(document).ready(function() {
-  // $("#answer_quiz").on("submit", function(e){
-  //   e.preventDefault();
-  //   var formInputs = $(this);
-  //   var userGuess = $("input[name='guess_body']:checked").serialize();
-  //   debugger;
-  //   if(userGuess.guess_body != ""){
-  //       $.ajax({
-  //         method: formInputs.attr("method"),
-  //         url:    formInputs.attr("action"),
-  //         data:   userGuess
-  //       })
-  //     .done(function(response){
-  //       $('#wrapper').empty()
-  //       $('#wrapper').append(response);
-  //     })
-  //   }
-  //   else{
-  //     console.log(userGuess)
-  //     var error = "Must select at-least one option"
-  //       $.ajax({
-  //         method: formInputs.attr("method"),
-  //         url:    formInputs.attr("action"),
-  //         data:   error
-  //       })
-  //     .done(function(response){
-  //       console.log("response inside error :" + response);
-  //       $('#show-error').append(response);
-  //   })
-  //   }
-  // })
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ======================================================================================================
-// =======================================================================================================
-
-
 firstTime=1;
 colors = [ "yellow", "red", "white", "orange", "purple","green","brown","pink","blue"];
 entries = ["Entertainment", "Geography", "Mathematics", "Sports", "Technology", "Ruby", "HTML", "jQuery", "CSS", "JavaScript"];
@@ -278,6 +202,8 @@ function stopRotateWheel() {
     h=$(this).height()
     wh=$("#wellDone").height()
 
+
+
     $("#wellDone").stop().animate(
       {
       left:((w-wd)/2)-25+"px"
@@ -288,6 +214,7 @@ function stopRotateWheel() {
       );
       $("#wellDone").css("top",((h-wh)/2)-65+"px");
 
+
   }
 
 function easeOut(t, b, c, d) {
@@ -296,114 +223,3 @@ function easeOut(t, b, c, d) {
     return b+c*(tc + -3*ts + 3*t);
   }
 
-
-  wheeldiv = document.getElementById("wheelcanvas");
-
-  if (wheeldiv.addEventListener)
-  {
-      wheeldiv.addEventListener('touchmove', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsMoving2(touch.pageX,touch.pageY);
-    }, false);
-
-      wheeldiv.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsDown(touch);
-    }, false);
-
-    wheeldiv.addEventListener('touchend', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsUp(touch);
-       spin();
-    }, false);
-  }
-  else if (wheeldiv.attachEvent)
-  {
-      wheeldiv.attachEvent('touchmove', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsMoving2(touch.pageX,touch.pageY);
-    }, false);
-
-    wheeldiv.attachEvent('touchstart', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsDown(touch);
-    }, false);
-
-    wheeldiv.attachEvent('touchend', function(e) {
-      e.preventDefault();
-      touch = e.touches[0];
-       wheelmsUp(touch);
-       spin();
-    }, false);
-  }
-
-
-
-  ismsDown = false;
-  prevX = 0;
-  prevY = 0;
-  midX = 250;
-  midY = 250;
-
-  drawText = true;
-
-  function wheelmsDown(e) {
-
-   wheeldiv = document.getElementById("wheelcanvas");
-    midX = wheeldiv.offsetLeft+wheelRadius+wheeldiv.offsetParent.offsetLeft;
-   midY = wheeldiv.offsetTop+wheelRadius+wheeldiv.offsetParent.offsetTop;
-   prevX=e.clientX;
-   prevY=e.clientY;
-    ismsDown = true;
-  }
-
-  function wheelmsMoving(e) {
-  if (ismsDown == true) {
-   x = e.clientX+document.documentElement.scrollLeft+document.body.scrollLeft;
-   y = e.clientY+document.documentElement.scrollTop+document.body.scrollTop;
-   if (x > midX) {
-    if (y > midY) {
-      startAng += ((prevX-x)-(prevY-y)) *0.01;
-    } else {
-     startAng += (0-(prevX-x)-(prevY-y)) *0.01;
-    }
-   } else {
-    if (y > midY) {
-      startAng += ((prevX-x) + (prevY-y)) *0.01;
-    } else {
-     startAng += (0-(prevX-x) + (prevY-y)) *0.01;
-    }
-   }
-   prevX=x;
-   prevY=y;
-   drawWheel(false);
-   }
-  }
-  function wheelmsMoving2(x,y) {
-  if (ismsDown == true) {
-   if (x > midX) {
-    if (y > midY) {
-      startAng += ((prevX-x)-(prevY-y)) *0.01;
-    } else {
-     startAng += (0-(prevX-x)-(prevY-y)) *0.01;
-    }
-   } else {
-    if (y > midY) {
-      startAng += ((prevX-x) + (prevY-y)) *0.01;
-    } else {
-     startAng += (0-(prevX-x) + (prevY-y)) *0.01;
-    }
-   }
-   prevX=x;
-   prevY=y;
-   drawWheel(false);
-   }
-  }
-  function wheelmsUp(e) {
-    ismsDown = false;
-  }
