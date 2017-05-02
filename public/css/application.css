@@ -1,0 +1,14 @@
+body, html{
+  text-rendering: auto;
+  font-family:Verdana, Geneva, sans-serif;
+  margin: 0 auto;
+}
+h1 {
+  color: rgb(200,200,200);
+}
+h2 {
+  font-family: 'Rye', cursive;
+}
+h3 {
+  text-shadow: 0.5px 1px 1px #88D;
+}
