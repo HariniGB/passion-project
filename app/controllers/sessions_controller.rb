@@ -22,7 +22,7 @@ post '/games/topic' do
   @new_game = Game.new(user_id: current_user.id, score: 0)
   if request.xhr? && @new_game.save
     status 200
-    params.keys.first
+    game_in(@new_game)
     @topic = Topic.find_by(topic_name: params.keys.first)
     @quiz = @topic.quizzes.first
     erb :'quizzes/show', layout: false

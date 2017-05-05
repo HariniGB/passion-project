@@ -4,7 +4,7 @@
     <ul>
       <% User.all.each do |user| %>
         <div class="floating-box">
-          <lable><a href="/users/<%= user.id %> "> <%= @user.first_name%> <%= @user.last_name%> </a></lable><br>
+          <lable><a href="/users/<%= user.id %> "> <%= user.first_name%> <%= user.last_name%> </a></lable><br>
           <% if user.id == session[:id] %>
             <div class="links">
               <a href='/users/<%="#{@user.id}"%>/edit'>Update Profile </a>

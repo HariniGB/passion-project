@@ -14,8 +14,8 @@
   <fieldset>
     <legend> <em><b>Game Record</b></em></legend>
     <div>
-      <label>Total games: <%= @user.games.count%></label><br>
-      <label>Average Score: <%= @user.average_score%></label>
+      <label>Total games:<%= @user.games.count%></label><br>
+      <label>Average Score:<%= @user.average_score%></label>
       <% if @user.games %>
         <h3> List of topics with score </h3>
         <% count = 1 %>
