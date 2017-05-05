@@ -57,18 +57,6 @@ get '/users/:user_id/games/:topic_id/:quiz_id' do
   erb :'quizzes/show'
 end
 
-# post '/user/:user_id/games/:game_id/guess' do
-#   @user = User.find(params[:user_id])
-#   @game = @user.game.new(params[:game])
-#   if @game.save
-#     redirect "/users/#{@user.id}"
-#   else
-#     @errors = []
-#     @errors << @game.errors.full_messages
-#     erb :'games/new'
-#   end
-# end
-
 get '/users/:user_id/games/:game_id' do
   @game = Game.find(params[:game_id])
   erb :'games/show'

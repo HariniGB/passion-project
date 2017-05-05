@@ -19,29 +19,31 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/wheel.js"></script>
     <script src="/js/application.js"></script>
 
-    <title></title>
+    <title>SPIN THE WHEEL</title>
   </head>
   <body>
-    <header>
-      <h1>Spin the Wheel</h1>
-      <div>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a> </li>
-            <% if !session[:id] %>
-                <li> <a href='/users/index'> Login</a></li>
-            <% elsif session[:id] %>
+    <div class="my-container">
+      <header>
+        <h1>Spin the Wheel</h1>
+         <img src="http://i.imgur.com/ynPBkfq.jpg">
+          <nav>
+            <ul>
+              <li><a href="/">Home</a> </li>
+              <% if !session[:id] %>
+              <li> <a href='/users/index'> Login</a></li>
+              <% elsif session[:id] %>
               <li> <a href='/users/<%= "#{session[:id]}"%>'>My profile </a></li>
-              <%= erb :'_logout' %>
-            <% end %>
-          </ul>
-        </nav>
+              <li><%= erb :'_logout' %></li>
+              <% end %>
+            </ul>
+          </nav>
+      </header>
+      <div>
+        <%= yield %>
       </div>
-    </header>
-    <div>
-      <%= yield %>
     </div>
   </body>
 </html>

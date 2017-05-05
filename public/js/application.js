@@ -1,3 +1,25 @@
+$(document).ready(function(){
+  $("#game").on("submit",function(e){
+    e.preventDefault();
+    // Get the segment indicated by the pointer on the wheel background which is at 0 degrees.
+    // var winningSegment = theWheel.getIndicatedSegment().text;
+    var form = $(this);
+    console.log(theWheel.alertTopic());
+    $.ajax({
+        method: form.attr("method"),
+        url: form.attr("action"),
+        data: theWheel.alertTopic()
+    })
+    .done(function(response){
+      $(".wheel").hide();
+      $("main").append(response)
+    })
+    .fail(function(eresponse){
+      alert(eresponse.responseText);
+    })
+  });
+});
+
 // $(document).ready(function() {
   // $("#answer_quiz").on("submit", function(e){
   //   e.preventDefault();

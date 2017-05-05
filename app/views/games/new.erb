@@ -1,14 +1,8 @@
 <main>
-  <%= erb :'wheel'%><br><br>
-  <p>
-    <% @topic = Topic.all.sample%>
-    The topic is <%= @topic.topic_name%>
-  </p>
-  <form action= '/sessions/game' method= 'post'>
-    <input type="hidden" name="topic_id" value="<%= @topic.id%>" >
-    <button type="submit" >START THE GAME</button>
-  </form>
-  <div>
-    <%= erb :'_errors' %>
+  <div class='wheel'>
+  <%= erb :'_errors' %>
+      <section>
+        <%= erb :'wheel'%><br><br>
+      </section>
   </div>
 </main>

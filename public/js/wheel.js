@@ -1,6 +1,6 @@
 
 // Create new wheel object specifying the parameters at creation time.
-var theWheel = new Winwheel({
+theWheel = new Winwheel({
 'numSegments'  : 10,     // Specify number of segments.
 'outerRadius'  : 212,   // Set outer radius so wheel fits inside the background.
 'textFontSize' : 25,    // Set font size as desired.
@@ -124,13 +124,9 @@ wheelSpinning = false;          // Reset to false to power buttons and spin can 
 // -------------------------------------------------------
 // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters.
 // -------------------------------------------------------
-function alertTopic()
+Winwheel.prototype.alertTopic = function ()
 {
-// Get the segment indicated by the pointer on the wheel background which is at 0 degrees.
-var winningSegment = theWheel.getIndicatedSegment().text;
-
-// Do basic alert of the segment text. You would probably want to do something more interesting with this information.
-// alert("Your Topic is: " + winningSegment.text);
-return winningSegment;
+    var winningSegment = theWheel.getIndicatedSegment().text;
+    return winningSegment;
 }
 

@@ -1,16 +1,19 @@
+<main class="profile">
 <fieldset>
     <legend> <em><b>Game Record</b></em></legend>
-    <div>
+    <div class="game_result">
       <p>Number of questions: <%= @game.total_questions %></p>
       <p>Score: <%= @game.total_score %></p>
       <% @game.save %>
       <p>Correct answers: <%= @game.total_correct_questions %></p>
+      <br><br><br>
       <p>Wrong Questions:</p>
       <% wrong_qn_list = @game.list_of_wrong_questions %>
         <% wrong_qn_list.uniq.each do |qn| %>
           <% searchQuestion = qn.split(" ").join("+") %>
-          <p><a href='https://www.google.com/#q=<%=searchQuestion%>'> <%=qn %></a></p>
+          <p><a href='https://www.google.com/#q=<%=searchQuestion%>'> <%=qn %></a><p>
         <%end%>
     </div>
 </fieldset>
+</main>
 

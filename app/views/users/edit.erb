@@ -1,5 +1,5 @@
 <main>
-  <form method="post" action="<%= "/users/#{@user.id}" %>" id="edit-profile-form">
+  <form class="login" method="post" action="<%= "/users/#{@user.id}" %>" id="edit-profile-form">
     <input type="hidden" name="_method" value="put">
         <label for="input">First Name:</label>
         <input name="user[first_name]" type="text" value="<%= @user.try(:first_name) %>">

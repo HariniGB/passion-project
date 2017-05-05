@@ -1,5 +1,9 @@
-<% if @errors  %>
-  <% @errors.each do |error| %>
-    <%= error %>
+<div class="field_with_errors">
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
   <% end %>
-<% end %>
+</div>

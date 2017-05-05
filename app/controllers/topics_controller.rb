@@ -7,13 +7,17 @@ post '/topic/:topic_id/quiz/:quiz_id/guess' do
     if user_guess.save
       @quiz = quiz.next_quiz
       if @quiz
+        status 200
         redirect "/users/#{current_user.id}/games/#{topic.id}/#{@quiz.id}"
       else
+        status 200
         redirect "/users/#{current_user.id}/games/#{current_game.id}"
       end
     else
+      status 422
       @errors = []
       @errors << user_guess.errors.full_messages
       erb :'quizzes/show'
     end
 end
+

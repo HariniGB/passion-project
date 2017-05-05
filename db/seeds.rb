@@ -176,11 +176,11 @@ end
 
 #===============================================================================================================
 
-questions7 =["The common element which describe the web page, is ?"," HTML stands for?","which of the following tag is used to mark a begining of paragraph ?","From which tag descriptive list starts ?"," Correct HTML tag for the largest heading is","The attribute of <form> tag"," www is based on which model?","Which of the following attributes of text box control allow to limit the maximum character?"]
+questions7 =["The common element which describe the web page, is ?"," HTML stands for?","which of the following tag is used to mark a begining of paragraph ?","From which tag descriptive list starts ?"," Correct HTML tag for the largest heading is","The attribute of &lt;form> tag"," www is based on which model?","Which of the following attributes of text box control allow to limit the maximum character?"]
 
-answers7 =["All of these","Hyper Text Markup Language","<P>","<DL>","<h1>","Both (a)&(b)","Client-server","maxlength"]
+answers7 =["All of these","Hyper Text Markup Language","&lt;P>","&lt;DL>","&lt;h1>","Both (a)&(b)","Client-server","maxlength"]
 
-options7 =[["heading","paragraph","list","All of these"],["Hyper Text Markup Language","High Text Markup Languag","Hyper Tabular Markup Languag","None of these"],["<TD>","<br>","<P>","<TR>"],["<LL>","<DD>","<DL>","<DS>"],["<head>","<h6>","<heading>","<h1>"],["Method","Action","Both (a)&(b)","None of these"],["Local-server","Client-server","3-tier","None of these"],["size","len","maxlength","all of these"]]
+options7 =[["heading","paragraph","list","All of these"],["Hyper Text Markup Language","High Text Markup Languag","Hyper Tabular Markup Languag","None of these"],["&lt;TD>","&lt;br>","&lt;P>","&lt;TR>"],["&lt;LL>","&lt;DD>","&lt;DL>","&lt;DS>"],["&lt;head>","&lt;h6>","&lt;heading>","&lt;h1>"],["Method","Action","Both (a)&(b)","None of these"],["Local-server","Client-server","3-tier","None of these"],["size","len","maxlength","all of these"]]
 
 
 questions7.each_index do |i|
@@ -191,7 +191,7 @@ questions7.each_index do |i|
 end
 
 #===============================================================================================================
-questions8 =["Can you pass a anonymous function as an argument to another function?"," Which of the following is correct about callbacks?","Which of the following jQuery selector selects element with the given element id some-id?","Which of the following jQuery method sets attributes of an element?","Which of the following jQuery method adds more elements, matched by the given selector, to the set of matched elements?","Which of the following jQuery method gets a set of elements containing the closest parent element that matches the specified selector, the starting element included?","Which of the following jQuery method sets the style property of an element?","Q 8 - Which of the following jQuery method returns a jQuery collection with the positioned parent of the first matched element?","Which of the following jQuery method can be used to make a ajax call?","Which of the following jQuery method serializes a set of input elements into a string of data?"]
+questions8 =["Can you pass a anonymous function as an argument to another function?"," Which of the following is correct about callbacks?","Which of the following jQuery selector selects element with the given element id some-id?","Which of the following jQuery method sets attributes of an element?","Which of the following jQuery method adds more elements, matched by the given selector, to the set of matched elements?","Which of the following jQuery method gets a set of elements containing the closest parent element that matches the specified selector, the starting element included?","Which of the following jQuery method sets the style property of an element?","Which of the following jQuery method returns a jQuery collection with the positioned parent of the first matched element?","Which of the following jQuery method can be used to make a ajax call?","Which of the following jQuery method serializes a set of input elements into a string of data?"]
 
 answers8 = ["true","Both of the above","$('#some-id')","attr(name, value)","add( selector )","closest(selector)","css( name, value )","offsetParent( )","load( url, [data], [callback] )","serialize( )"]
 
@@ -238,7 +238,7 @@ questions9.each_index do |i|
 end
 #===============================================================================================================
 
-questions10 = ["Can you access Cookie using javascript?","Which of the following type of variable is visible everywhere in your JavaScript code?","Which built-in method calls a function for each element in the array?","Which built-in method returns the calling string value converted to upper case?","Which of the following function of Number object defines how many total digits to display of a number?","Which of the following function of String object extracts a section of a string and returns a new string?","Which of the following function of String object creates a string to be displayed in a big font as if it were in a <big> tag?","Which of the following function of String object causes a string to be displayed in the specified color as if it were in a <font color='color'> tag?","Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?","Which of the following function of Array object adds one or more elements to the front of an array and returns the new length of the array?"]
+questions10 = ["Can you access Cookie using javascript?","Which of the following type of variable is visible everywhere in your JavaScript code?","Which built-in method calls a function for each element in the array?","Which built-in method returns the calling string value converted to upper case?","Which of the following function of Number object defines how many total digits to display of a number?","Which of the following function of String object extracts a section of a string and returns a new string?","Which of the following function of String object creates a string to be displayed in a big font as if it were in a &lt;big> tag?","Which of the following function of String object causes a string to be displayed in the specified color as if it were in a &lt;font color='color'> tag?","Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?","Which of the following function of Array object adds one or more elements to the front of an array and returns the new length of the array?"]
 
 answers10 = ["true
 ","global variable","forEach()","toUpperCase()","toPrecision()","slice()","big()","fontcolor()","every()","unshift()"]
@@ -270,3 +270,7 @@ Guess.create(point: 3, guess_body: "A subway train", game_id: game.id, quiz_id: 
 # .score method is to calculate the sum of points in guesses table and save it as score in game table.
 game.score
 game.save
+
+# Edge case
+
+Quiz.create(question: "No more questions",answer: "the end", weight: 3,topic_id: 11)

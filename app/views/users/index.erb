@@ -1,16 +1,17 @@
-<div>
-  <h1>Login</h1>
-    <form method="post" action="/sessions">
-      <label for="input">Email</label>
-      <input name="email" type="text"> <br><br>
+<div class="container">
+    <form class="login" method="post" action="/sessions">
+      <label for="input">Email:  </label> <input name="email" type="text" placeholder="Enter email"> <br><br>
 
-      <label for="input">Password:</label>
-      <input type="password" name="password" type="text"> <br><br>
+      <label for="input">Password:  </label>  <input type="password" name="password" type="text" placeholder="Enter password"> <br><br>
 
       <input type="submit" value="Login" class="button">
-     <p> If new user <a href='/users/new'>Sign Up </a></p>
+      <br><br>
+
+      <input type="checkbox" checked="checked"> Remember me <br>
+
+      <button type="button" class="cancelbtn">Cancel</button><br><br>
+
+      <span class="psw">If new user <a href='/users/new'>Sign Up </a></span>
     </form>
 </div>
-<div>
-  <%= erb :'_errors' %>
-</div>
+<%= erb :'_errors' %>
