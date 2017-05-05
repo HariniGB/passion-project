@@ -37,6 +37,7 @@
               <% elsif session[:id] %>
               <li> <a href='/users/<%= "#{session[:id]}"%>'>My profile </a></li>
               <li><%= erb :'_logout' %></li>
+              <li><a href='users/<%= session[:id]%>/all'>All users</a>
               <% end %>
             </ul>
           </nav>

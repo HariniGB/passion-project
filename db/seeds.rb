@@ -27,8 +27,8 @@ end
 # Add all the quizzes under each topic.
 
 ## TOPIC 1
-questions1 =["A new series of the panel game I'm Sorry I Haven't a Clue began on 15th June 2009 on BBC Radio 4. Who was chairman?", "In the 2009 Big Brother series, what is the profession of housemate Angel?", "What is the name of Sir Alan Sugar's sidekick on The Apprentice, who announced in June 2009 she'd be leaving the show?", "Denzil Washington stars in the 2009 film The Taking of Pelham 123. What is Pelham 123?", "Take That commenced their 2009 stadium tour on 6th June at which venue?", "In June 2009 Michael Jackson announced that for his forthcoming London concerts he wants a children's choir with each child capable of doing what?", "The Tony Awards were staged in June 2009 at which New York City venue?
-", "Which celebrity chef apologised in June 2009 for likening an Australian TV presenter to a pig?", "A prison photograph released in June 2009 shows the 'Wall of Sound' pioneer Phil Spector without his what?
+questions1 =["A new series of the panel game I'm Sorry I Haven't a Clue began on 15th June 2009 on BBC Radio 4. Who was chairman?", "In the 2009 Big Brother series, what is the profession of house mate Angel?", "What is the name of Sir Alan Sugar's sidekick on The Apprentice, who announced in June 2009 she'd be leaving the show?", "Denzil Washington stars in the 2009 film The Taking of Pelham 123. What is Pelham 123?", "Take That commenced their 2009 stadium tour on 6th June at which venue?", "In June 2009 Michael Jackson announced that for his forthcoming London concerts he wants a children's choir with each child capable of doing what?", "The Tony Awards were staged in June 2009 at which New York City venue?
+", "Which celebrity chef apologized in June 2009 for likening an Australian TV presenter to a pig?", "A prison photograph released in June 2009 shows the 'Wall of Sound' pioneer Phil Spector without his what?
 ", " Who released the June 2009 single Did You See Me Coming?"]
 
 answers1 = ["Stephen Fry","Boxer","Margaret Mountford","A subway train", "Stadium of Light", "Read sign language", "Radio City Music Hall", "Gordon Ramsay", "Wig", "Pet Shop Boys"]
@@ -56,13 +56,13 @@ end
 
 questions2 = ["What conditions are required for the ice crystal formation known as diamond dust?","How deep is the atmosphere that surrounds the Earth?","Air pressure is otherwise known as what?","Long-distance aircraft usually fly in which layer of the atmosphere?","As far as the weather is concerned, what is the most important gas in the atmosphere?"," The currents of which ocean produce the El Nino effect?","The sky looks blue because light is scattered by what?","How long ago did the last ice age peak?","Precipitation is a word used to describe what?","Ash coming into leaf before Oak is supposed to signify what?"]
 
-answers2 =["Very cold and dry","About 400 miles","Atmospheric pressure","In the higher troposphere","Water vapour","Pacific","Gas molecules and dust particles","Approximately 20,000 years ago","Rain, snow and hail","It will be a wet summer"]
+answers2 =["Very cold and dry","About 400 miles","Atmospheric pressure","In the higher troposphere","Water vapor","Pacific","Gas molecules and dust particles","Approximately 20,000 years ago","Rain, snow and hail","It will be a wet summer"]
 
 options2 = [["Very cold and dry","Very windy","Very humid","Very calm"],
 ["About 50 miles","About 100 miles","About 400 miles","About 1,000 miles"],
 ["Atmospheric weight","Atmosphere weight","Atmosphere pressure","Atmospheric pressure"],
 ["In the lower troposphere","In the higher troposphere","In the stratosphere","In the exosphere"],
-["Oxygen","Water vapour","Nitrogen","Helium"],
+["Oxygen","Water vapor","Nitrogen","Helium"],
 ["Indian","Atlantic","Pacific","Arctic"],
 ["Ice Crystals","Ozone","Gas molecules and dust particles","Water droplets"],
 ["Approximately 20,000 years ago","Approximately 200,000 years ago","Approximately 2 million years ago","Approximately 20 million years ago"],
@@ -77,8 +77,8 @@ questions2.each_index do |i|
 end
 
 #===============================================================================================================
-questions3 = ["What is the sum of the angles within a triangle?","What is derived by use of the formula ?r²?
-","What are lines called which always have the same distance between them?","What mathematical function is represented by the / symbol?","Which numerical system only uses the chracters 0 and 1?","What nationality was the legendary mathematician Pythagoras?","Which line joins the centre to any point on a circle's circumference?","How many right angles are contained within a rectangle?","How many sides does a pentagon have?"," Mean, Median and Mode are types of what?"]
+questions3 = ["What is the sum of the angles within a triangle?","What is derived by use of the formula pi r²?
+","What are lines called which always have the same distance between them?","What mathematical function is represented by the / symbol?","Which numerical system only uses the characters 0 and 1?","What nationality was the legendary mathematician Pythagoras?","Which line joins the center to any point on a circle's circumference?","How many right angles are contained within a rectangle?","How many sides does a pentagon have?"," Mean, Median and Mode are types of what?"]
 
 
 answers3 = ["180 degrees","Area of a circle
@@ -105,7 +105,7 @@ questions3.each_index do |i|
 end
 
 #===============================================================================================================
-questions4=  ["Which Premiership football club plays its home games at White Hart Lane?","Which English footballer scored a great goal against Argentina in the 1998 World Cup?"," Who was England's chief coach at the 2006 FIFA World Cup ?","What are Bristol's two football clubs called?"," What colour are the home shirts of Everton Football Club?","Which country did footballer Kenny Dalglish represent?","Which country won its fifth football World Cup in 2002?","Which of these football clubs is not based in Lancashire?","'The Wizard Of Dribble', which Stanley was a famous England footballer?","Which footballer was known as 'Gazza'?"]
+questions4=  ["Which Premiership football club plays its home games at White Hart Lane?","Which English footballer scored a great goal against Argentina in the 1998 World Cup?"," Who was England's chief coach at the 2006 FIFA World Cup ?","What are Bristol's two football clubs called?"," What color are the home shirts of Everton Football Club?","Which country did footballer Kenny Dalglish represent?","Which country won its fifth football World Cup in 2002?","Which of these football clubs is not based in Lancashire?","'The Wizard Of Dribble', which Stanley was a famous England footballer?","Which footballer was known as 'Gazza'?"]
 
 answers4 =["Tottenham Hotspur","Michael Owen","Sven Goran Eriksson","City and Rovers","Blue","Scotland","Brazil","Barnsley","Matthews","Paul Gascoigne"]
 
@@ -238,7 +238,7 @@ questions9.each_index do |i|
 end
 #===============================================================================================================
 
-questions10 = ["Can you access Cookie using javascript?","Which of the following type of variable is visible everywhere in your JavaScript code?","Which built-in method calls a function for each element in the array?","Which built-in method returns the calling string value converted to upper case?","Which of the following function of Number object defines how many total digits to display of a number?","Which of the following function of String object extracts a section of a string and returns a new string?","Which of the following function of String object creates a string to be displayed in a big font as if it were in a &lt;big> tag?","Which of the following function of String object causes a string to be displayed in the specified color as if it were in a &lt;font color='color'> tag?","Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?","Which of the following function of Array object adds one or more elements to the front of an array and returns the new length of the array?"]
+questions10 = ["Can you access Cookie using javascript?","Which of the following type of variable is visible everywhere in your JavaScript code?","Which built-in method calls a function for each element in the array?","Which built-in method returns the calling string value converted to upper case?","Which of the following function of Number object defines how many total digits to display of a number?","Which of the following function of String object extracts a section of a string and returns a new string?","Which of the following function of String object creates a string to be displayed in a big font as if it were in a &lt;big&gt; tag?","Which of the following function of String object causes a string to be displayed in the specified color as if it were in a `font color='color'` tag?","Which of the following function of Array object returns true if every element in this array satisfies the provided testing function?","Which of the following function of Array object adds one or more elements to the front of an array and returns the new length of the array?"]
 
 answers10 = ["true
 ","global variable","forEach()","toUpperCase()","toPrecision()","slice()","big()","fontcolor()","every()","unshift()"]

@@ -1,14 +1,17 @@
 body, html{
   text-rendering: auto;
-  font-family:Verdana, Geneva, sans-serif;
+  font-family:Times, serif;
   margin: 0 auto;
+  font-weight: 500
 }
 h1 {
   color: rgb(200,200,200);
   text-shadow: 0.5px 1px 1px #88D;
+  font-family:Times, serif;
+  font-weight: 500
 }
 h2 {
-  font-family: 'Rye', cursive;
+  font-family:Times, serif;
 }
 h3{
   text-align: center;
@@ -20,6 +23,9 @@ h3{
     position: relative;
     overflow: hidden;
     z-index: 2;
+    background-color: black;
+    font-family:Times, serif;
+    font-weight: 500;
 }
 .my-container h1 {
     text-align: center;
@@ -34,7 +40,7 @@ h3{
     width: 100%;
     height: auto;
     z-index: -1;
-    opacity: 1;
+    background-color: black;
 }
 
 ul {
@@ -42,6 +48,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family:Times, serif;
 }
 
 li {
@@ -74,6 +81,8 @@ li:active {
     margin: 0 auto;
     text-align: center;
     height: 450px;
+    font-family:Times, serif;
+    font-weight: 500;
 }
 
 .login{
@@ -83,6 +92,8 @@ li:active {
     margin: 0 auto;
     text-align: center;
     height: 350px;
+    font-family:Times, serif;
+    font-weight: 500;
 }
 
 input[type=text], input[type=password] {
@@ -102,6 +113,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-family:Times, serif;
 }
 
 button:hover {
@@ -114,6 +126,7 @@ button:hover {
     background-color: #f44336;
     float: left;
     margin-left: 10px;
+    font-family:Times, serif;
 }
 
 label{
@@ -150,6 +163,8 @@ span.psw {
   font-size: 14px;
   background: #630c0c;
   display: table;
+  font-family:Times, serif;
+  font-weight: 500;
 }
 
 .profile{
@@ -163,6 +178,15 @@ span.psw {
   text-align: center;
   color: white;
   margin-top: 50px;
+  font-family:Times, serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+#wrong_qn_list{
+  text-align: left;
+  margin-left: 5%;
+  width: 95%;
+  font-family:Times, serif;
 }
 .logout {
   border:none;
@@ -172,6 +196,7 @@ span.psw {
   font-size: 25px;
   letter-spacing: 1px;
   background: none;
+  font-family:Times, serif;
 }
 .links a{
   color: white;
@@ -195,6 +220,7 @@ span.psw {
   margin: 0 auto;
   text-align: center;
   color: black;
+  font-family:Times, serif;
 }
 #quiz_submit{
   color: black;
@@ -203,6 +229,7 @@ span.psw {
 
 #game_messge{
   font-size: 14px;
+  font-family:Times, serif;
 }
 
 #quiz_page{
@@ -217,9 +244,12 @@ span.psw {
     color: white;
     padding-left: 5px;
     font-size: 17px;
+    font-family:Times, serif;
+    font-weight: 500;
 }
 .options{
   text-align: center;
+  font-family:Times, serif;
 }
 input[type='radio'], label{
     text-align: left;
@@ -234,6 +264,8 @@ label{
   word-spacing: 2px;
   font-size: 20px;
   text-align: center;
+  font-family:Times, serif;
+  font-weight: 500;
 }
 .game_result a{
   color: white;
@@ -244,7 +276,65 @@ label{
 }
 .profile a{
   color: white;
-  font-size: 15px;
-  margin: 5em;
-  padding: 10px;
+  font-size: 18px;
+  /*margin: 5em;*/
+  /*padding: 10px;*/
+}
+
+.instructions {
+  padding: 2%;
+  color: white;
+  font-size: 30px;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+
+.homepage {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.homepage {
+  color: white;
+  font-size: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0 1% 1% 1%;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+.game_end{
+  color: black;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+.users_page{
+  background-image: url("http://i.imgur.com/dnntX4G.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 70%;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.floating-box {
+  display: inline-block;
+  text-align: center;
+  background-color: #edc297;
+  font-family:Times, serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+  width: 20%;
+  height: 20%;
+  border: 3px solid #FFBF7F;
+  padding: 15px;
 }

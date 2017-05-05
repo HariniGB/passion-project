@@ -20,6 +20,25 @@ $(document).ready(function(){
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // $(document).ready(function() {
   // $("#answer_quiz").on("submit", function(e){
   //   e.preventDefault();

@@ -8,8 +8,7 @@ post '/sessions'  do
     login(@user)
     redirect "/users/#{@user.id}"
   else
-    @errors = []
-    @errors << 'email or password was incorrect'
+    @errors = ['email or password was incorrect']
     erb :'users/index'
   end
 end
@@ -23,9 +22,9 @@ post '/games/topic' do
   @new_game = Game.new(user_id: current_user.id, score: 0)
   if request.xhr? && @new_game.save
     status 200
-    p params.keys.first
-    p @topic = Topic.find_by(topic_name: params.keys.first)
-    p @quiz = @topic.quizzes.first
+    params.keys.first
+    @topic = Topic.find_by(topic_name: params.keys.first)
+    @quiz = @topic.quizzes.first
     erb :'quizzes/show', layout: false
   elsif request.xhr?
     status 422
@@ -39,18 +38,15 @@ post '/games/topic' do
     redirect "/users/#{current_user.id}/games/#{@topic.id}/#{@quiz.id}"
   else
     status 422
-    @errors = []
-    @errors << @game.errors.full_messages
+    @errors = @game.errors.full_messages
     erb :'games/new'
   end
 end
 
 
-delete 'sessions/game/:id' do
-  games = Game.find_by(score: 0)
-  games.destroy!
-  game_out
-  redirect 'users/show'
+delete '/topic/:topic_id/quiz/:quiz_id/guess' do
+  status 200
+  redirect "/users/#{current_user.id}/games/#{current_game.id}"
 end
 
 

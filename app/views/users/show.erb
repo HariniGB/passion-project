@@ -4,10 +4,12 @@
     <p> Last Name : <%= @user.last_name%> </p><br>
     <p> Email : <%= @user.email%> </p><br><br>
   </header>
-  <div class="links">
-    <a href='/users/<%="#{@user.id}"%>/edit'>Update Profile </a> <br><br>
-    <a href= '/users/<%="#{@user.id}"%>/edit'>Delete Account </a>
-  </div>
+  <% if @user.id == session[:id] %>
+    <div class="links">
+      <a href='/users/<%="#{@user.id}"%>/edit'>Update Profile </a> <br><br>
+      <a href= '/users/<%="#{@user.id}"%>/edit'>Delete Account </a>
+    </div>
+  <% end %>
   <br><br>
   <fieldset>
     <legend> <em><b>Game Record</b></em></legend>
@@ -23,6 +25,8 @@
             <% if !game.guesses.empty? %>
               <p>Game <%= count%>: <a href="/users/<%= @user.id %>/games/<%= game.id%>"><%= game.guesses.first.topic.topic_name %> </a>, score: <%= game.score %></p>
               <% count += 1%>
+            <% else %>
+              <!-- write game : 0 -->
             <% end %>
         <% end %>
       <% end %>

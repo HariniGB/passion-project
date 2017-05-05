@@ -7,16 +7,15 @@ get '/users/new' do
 end
 
 post '/users' do
-  @errors = []
   @user = User.new(params[:user])
   @user.password = params[:password]
   if @user.matching(params[:password],params[:confirm_password])
-    @errors << "Password is not matching."
+    @errors = ["Password is not matching."]
     erb :'users/new'
   elsif @user.save
     redirect '/users/index'
   else
-    @errors << @user.errors.full_messages
+    @errors = @user.errors.full_messages
     erb :'users/new'
   end
 end
@@ -24,6 +23,11 @@ end
 get '/users/:id' do
   @user = User.find(params[:id])
   erb :'users/show'
+end
+
+get '/users/:id/all' do
+  @user = User.find(params[:id])
+  erb :'users/show_users_list'
 end
 
 get '/users/:id/edit' do
@@ -59,6 +63,9 @@ end
 
 get '/users/:user_id/games/:game_id' do
   @game = Game.find(params[:game_id])
+  @game.total_score
+  @game.save
+  game_out
   erb :'games/show'
 end
 
