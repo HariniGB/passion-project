@@ -4,13 +4,13 @@
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
-
+require 'dotenv'
 # Require gems we care about
 require 'rubygems'
-
+require 'dotenv/load'
 require 'uri'
 require 'pathname'
-
+require 'twilio-ruby'
 require 'pg'
 require 'active_record'
 require 'logger'
