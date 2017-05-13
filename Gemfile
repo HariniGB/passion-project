@@ -14,7 +14,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'shotgun'
 gem 'dotenv'
-gem 'ruby', "~> 2.3.4"
+gem 'ruby'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -25,5 +25,4 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
-  gem 'dotenv-rails'
 end
