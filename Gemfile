@@ -9,10 +9,11 @@ gem 'sinatra-contrib'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'twilio-ruby', '~> 4.11.1'
 gem 'rake'
 gem 'bcrypt'
 gem 'shotgun'
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'
@@ -24,4 +25,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'dotenv-rails'
 end

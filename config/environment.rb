@@ -4,22 +4,21 @@
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
-
+require 'dotenv'
 # Require gems we care about
 require 'rubygems'
-
+require 'dotenv/load'
 require 'uri'
 require 'pathname'
-
+require 'twilio-ruby'
 require 'pg'
 require 'active_record'
 require 'logger'
 require 'bcrypt'
 require 'sinatra'
 require "sinatra/reloader" if development?
-
 require 'erb'
-
+Dotenv.load
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
