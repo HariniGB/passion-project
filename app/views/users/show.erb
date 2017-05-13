@@ -25,8 +25,6 @@
             <% if !game.guesses.empty? %>
               <p>Game <%= count%>: <a href="/users/<%= @user.id %>/games/<%= game.id%>"><%= game.guesses.first.topic.topic_name %> </a>, score: <%= game.score %></p>
               <% count += 1%>
-            <% else %>
-              <!-- write game : 0 -->
             <% end %>
         <% end %>
       <% end %>

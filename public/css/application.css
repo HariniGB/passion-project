@@ -80,11 +80,25 @@ li:active {
     width: 400px;
     margin: 0 auto;
     text-align: center;
-    height: 450px;
+    height: 550px;
     font-family:Times, serif;
     font-weight: 500;
+    padding: 10px 20px 0px 0px;
 }
-
+.signup label{
+  display:inline-block;
+  float: left;
+  padding-top: 5px;
+  text-align: right;
+  width: 140px;
+}
+.login label{
+  display:inline-block;
+  float: left;
+  padding-top: 5px;
+  text-align: right;
+  width: 140px;
+}
 .login{
     border: 3px solid #f1f1f1;
     background-color: #d6d6d6;
@@ -94,14 +108,16 @@ li:active {
     height: 350px;
     font-family:Times, serif;
     font-weight: 500;
+    padding: 10px 20px 0px 0px;
 }
 
 input[type=text], input[type=password] {
     width: 60%;
     padding: 15px 10px;
-    margin: 8px 0;
+    margin: 5px 0px 5px 20px;
     display: inline-block;
     border: 1px solid #ccc;
+    vertical-align:middle;
     box-sizing: border-box;
 }
 
