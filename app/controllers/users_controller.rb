@@ -65,6 +65,16 @@ get '/users/:user_id/games/:game_id' do
   @game = Game.find(params[:game_id])
   @game.total_score
   @game.save
+  @user = User.find(params[:user_id])
+  # set up a client to talk to the Twilio REST API
+  @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+  if @user
+    @client.messages.create(
+      from: '+17314514935',
+      to: '+18707406052',
+      body: "Hi #{@user.first_name} #{@user.last_name}, your latest score is #{@game.score}."
+    )
+  end
   game_out
   erb :'games/show'
 end

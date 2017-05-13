@@ -8,11 +8,13 @@ Topic.destroy_all
 
 user1 = User.new(first_name: "Harini", last_name: "Bala", email: "test@gmail.com")
 user1.password = "test"
+user1.phone_number = "+18707406052"
 # Creates a new game when the user selects the play button.
 user1.save
 
 user2 = User.new(first_name: "Fei", last_name: "Li", email: "lfangfeili@gmail.com")
 user2.password = "xxx"
+user2.phone_number = "+18707406052"
 user2.save
 #===============================================================================================================
 game = Game.create(user_id: user1.id, score: 0)
