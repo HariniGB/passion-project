@@ -129,10 +129,6 @@ button:hover {
     font-family:Times, serif;
 }
 
-label{
-    display:inline-block;
-    width:100px;
-}
 .container {
     padding: 16px;
 }
@@ -254,9 +250,6 @@ span.psw {
 input[type='radio'], label{
     text-align: left;
     width: 60px;
-}
-label{
-  width: 130px;
 }
 .game_result{
   padding: 20px;
