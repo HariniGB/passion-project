@@ -71,7 +71,7 @@ get '/users/:user_id/games/:game_id' do
   if @user
     @client.messages.create(
       from: '+17314514935',
-      to: '+18707406052',
+      to: "#{@user.phone_number}",
       body: "Hi #{@user.first_name} #{@user.last_name}, your latest score is #{@game.score}."
     )
   end

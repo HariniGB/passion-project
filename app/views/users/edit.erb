@@ -12,6 +12,11 @@
         <label for="input">Email</label>
         <input name="user[email]" type="text" value="<%= @user.try(:email) %>">
         <br><br>
+
+
+        <label for="input">Phone Number:  </label>
+        <input name="user[phone_number]" type="text" value="<%= @user.try(:phone_number) %>" placeholder="Enter phone number">
+        <br><br>
     <input type="submit" value="Update Profile" class="button">
   </form>
   <form method="post" action="<%= "/users/#{@user.id}" %>" id="edit-profile-form">
