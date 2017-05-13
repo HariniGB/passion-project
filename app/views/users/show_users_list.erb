@@ -1,0 +1,20 @@
+<div class='users_page'>
+  <h1>Registered Users</h1>
+  <div>
+    <ul>
+      <% User.all.each do |user| %>
+        <div class="floating-box">
+          <lable><a href="/users/<%= user.id %> "> <%= @user.first_name%> <%= @user.last_name%> </a></lable><br>
+          <% if user.id == session[:id] %>
+            <div class="links">
+              <a href='/users/<%="#{@user.id}"%>/edit'>Update Profile </a>
+              <a href= '/users/<%="#{@user.id}"%>/edit'>Delete Account </a>
+            </div>
+          <% end %>
+          <label>Total games: <%= user.games.count%></label><br>
+          <label>Average Score: <%= user.average_score%></label>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</div>

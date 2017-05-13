@@ -1,29 +1,28 @@
-<main>
-    <h1>Sign up</h1><br><br>
-    <form method="post" action="/users">
-        <label for="input">First Name:</label>
-        <input name="user[first_name]" type="text">
+<div class="container-long">
+    <form class="signup" class="signup" method="post" action="/users">
+        <label for="input">First Name:  </label>
+        <input name="user[first_name]" type="text" placeholder="Enter  first name">
         <br><br>
 
-        <label for="input">Last Name:</label>
-        <input  name="user[last_name]" type="text">
+        <label for="input">Last Name:  </label>
+        <input  name="user[last_name]" type="text" placeholder="Enter last name">
         <br><br>
 
-        <label for="input">Email</label>
-        <input name="user[email]" type="text">
+        <label for="input">Email:  </label>
+        <input name="user[email]" type="text" placeholder="Enter email address">
         <br><br>
 
-        <label for="input">Password:</label>
-        <input type="password" name="password" type="text">
+        <label for="input">Password:  </label>
+        <input type="password" name="password" type="text" placeholder="Enter password">
         <br><br>
 
-        <label for="input">Confirm Password:</label>
-        <input type="password" name="confirm_password" type="text">
+        <label for="input">Confirm Password:  </label>
+        <input type="password" name="confirm_password" type="text" placeholder="Enter same password">
         <br><br>
 
         <input type="submit" value="Sign Up" class="button">
     </form>
-    <div>
-        <%= erb :'_errors' %>
-    </div>
-</main>
+</div>
+<%= erb :'_errors' %>
+
+

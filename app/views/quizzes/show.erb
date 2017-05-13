@@ -1,13 +1,19 @@
-<main>
+<main id="quiz_page">
+  <div>
+    <h3> The topic is <%= @topic.topic_name %></h3>
+  </div>
   <div id = "wrapper">
     <form id= "answer_quiz" action='/topic/<%= @topic.id %>/quiz/<%= @quiz.id %>/guess' method='post'>
-        <label for='question'><%= @quiz.question %></label><br><br>
+        <p><%= @quiz.question %></p><br><br>
+        <div class="options">
         <% @quiz.options.each do |opt| %>
-          <input type= "radio" name = 'guess_body' value = '<%= opt.option %>'> <label><%= opt.option %></label>
+          <p><input type= "radio" name = 'guess_body' value = '<%= opt.option %>'> <label><%= opt.option %></label></p>
           <br><br>
         <% end %>
-      <input type="submit" value="Submit">
+        <input id="quiz_submit" type="submit" value="Submit">
+      </div>
     </form>
+    <%= erb :'games/_end_game', layout: false%>
   </div>
   <div id= "show-error">
       <%= erb :'_errors' %>

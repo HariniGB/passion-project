@@ -1,14 +1,340 @@
 body, html{
   text-rendering: auto;
-  font-family:Verdana, Geneva, sans-serif;
+  font-family:Times, serif;
   margin: 0 auto;
+  font-weight: 500
 }
 h1 {
   color: rgb(200,200,200);
+  text-shadow: 0.5px 1px 1px #88D;
+  font-family:Times, serif;
+  font-weight: 500
 }
 h2 {
-  font-family: 'Rye', cursive;
+  font-family:Times, serif;
 }
-h3 {
-  text-shadow: 0.5px 1px 1px #88D;
+h3{
+  text-align: center;
+  padding: 15px;
+}
+/* Back ground image */
+
+.my-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: black;
+    font-family:Times, serif;
+    font-weight: 500;
+}
+.my-container h1 {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+}
+.my-container img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family:Times, serif;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+li:hover {
+    background-color: #661B00;
+    border-bottom-color: #2953CF;
+}
+
+li:active {
+  background-color: #1F3D99;
+  border-width: 5px;
+}
+.signup{
+    border: 3px solid #f1f1f1;
+    background-color: #d6d6d6;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    height: 450px;
+    font-family:Times, serif;
+    font-weight: 500;
+}
+
+.login{
+    border: 3px solid #f1f1f1;
+    background-color: #d6d6d6;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    height: 350px;
+    font-family:Times, serif;
+    font-weight: 500;
+}
+
+input[type=text], input[type=password] {
+    width: 60%;
+    padding: 15px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 2px;
+    margin: 8px 2px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family:Times, serif;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    float: left;
+    margin-left: 10px;
+    font-family:Times, serif;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+}
+.container {
+    padding: 16px;
+}
+.container-long{
+  padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+.field_with_errors {
+  padding: 2px;
+  color: white;
+  font-size: 14px;
+  background: #630c0c;
+  display: table;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+
+.profile{
+  background-image: url("http://i.imgur.com/dnntX4G.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  font-family:Times, serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+#wrong_qn_list{
+  text-align: left;
+  margin-left: 5%;
+  width: 95%;
+  font-family:Times, serif;
+}
+.logout {
+  border:none;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+  background: none;
+  font-family:Times, serif;
+}
+.links a{
+  color: white;
+  font-size: 15px;
+  padding: 0;
+  margin: 5em;
+}
+
+.links a:hover {
+  background-color: #661B00;
+}
+
+.wheel{
+  background-image: url("http://i.imgur.com/MKfPiQHh.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 80%;
+  width: 100%;
+  margin-bottom: 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  font-family:Times, serif;
+}
+#quiz_submit{
+  color: black;
+  background-color: #93CF96;
+}
+
+#game_messge{
+  font-size: 14px;
+  font-family:Times, serif;
+}
+
+#quiz_page{
+  background-image:
+    radial-gradient(
+      #696969,
+      black
+    );
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    padding-left: 5px;
+    font-size: 17px;
+    font-family:Times, serif;
+    font-weight: 500;
+}
+.options{
+  text-align: center;
+  font-family:Times, serif;
+}
+input[type='radio'], label{
+    text-align: left;
+    width: 60px;
+}
+label{
+  width: 130px;
+}
+.game_result{
+  padding: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+.game_result a{
+  color: white;
+  font-size: 15px;
+  margin: 5em;
+  padding: 30px;
+  text-align: left;
+}
+.profile a{
+  color: white;
+  font-size: 18px;
+  /*margin: 5em;*/
+  /*padding: 10px;*/
+}
+
+.instructions {
+  padding: 2%;
+  color: white;
+  font-size: 30px;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+
+.homepage {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.homepage {
+  color: white;
+  font-size: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0 1% 1% 1%;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+.game_end{
+  color: black;
+  font-family:Times, serif;
+  font-weight: 500;
+}
+.users_page{
+  background-image: url("http://i.imgur.com/dnntX4G.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 70%;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.floating-box {
+  display: inline-block;
+  text-align: center;
+  background-color: #edc297;
+  font-family:Times, serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+  width: 20%;
+  height: 20%;
+  border: 3px solid #FFBF7F;
+  padding: 15px;
 }

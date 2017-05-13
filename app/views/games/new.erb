@@ -1,14 +1,8 @@
 <main>
-  <% @topic = Topic.all.sample %>
-  <p> The topic is <%= @topic.topic_name%></p>
-
-  <!-- # should enhance this page with the colored wheel and generate a topic in random. -->
-
-  <form action= '/sessions/game' method= 'post'>
-    <input type="hidden" name="topic_id" value="<%= @topic.id%>" >
-    <button type="submit" >START THE GAME</button>
-  </form>
-  <div>
-    <%= erb :'_errors' %>
+  <div class='wheel'>
+  <%= erb :'_errors' %>
+      <section>
+        <%= erb :'wheel'%><br><br>
+      </section>
   </div>
 </main>
